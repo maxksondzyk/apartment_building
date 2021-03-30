@@ -1,0 +1,28 @@
+.control-link{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2em;
+    /*margin: 1em;*/
+}
+.navigation{
+    /*display: flex;*/
+    /*color: white;*/
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    /*background: rgb(0,0,0);*/
+    /*background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.29485297536983546) 27%, rgba(0,0,0,0.4096989137451855) 62%, rgba(0,0,0,0.5413515748096114) 100%);*/
+    /*justify-content: space-between;*/
+    /*padding-top: 1em;;*/
+}
+.brand{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 2em;
+}
+.brand-div{
+    /*border-right-style: solid;*/
+    /*padding: 0.5em;*/
+
+}
+.navbar{
+    border-bottom: solid 5px;
+}
+
+

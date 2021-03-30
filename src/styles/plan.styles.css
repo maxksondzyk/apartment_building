@@ -1,0 +1,42 @@
+.apt:hover {
+    border: solid 1px black;
+    fill-opacity: 0.5;
+}
+.apt {
+    fill: black;
+    fill-opacity: 0;
+    stroke: black;
+    stroke-width: 13;
+    stroke-opacity: 1;
+    fill-rule: evenodd;
+    transition: all 0.3s;
+}
+.cont{
+    position: relative;
+    transition: all 0.5s;
+    width: 96%;
+    height: 0;
+    padding-top: 48%;
+}
+.main_plan{
+    /*width: 300px;*/
+    /*position: absolute;*/
+    /*top: 100px;*/
+    /*left: 0;*/
+}
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+path{
+    pointer-events: auto;
+}
+.planImg {
+    position: absolute;
+    top: -5%;
+    left: 2.1%;
+    width: inherit;
+    padding: 5.7%;
+}

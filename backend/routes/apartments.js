@@ -8,6 +8,7 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
+    const planning = String(req.body.planning)
     const number = Number(req.body.number);
     const floor = Number(req.body.floor);
     const rooms = Number(req.body.rooms);
@@ -17,6 +18,7 @@ router.route('/add').post((req, res) => {
     const price = Number(req.body.price);
 
     const newApartment = new Apartment({
+        planning,
         number,
         floor,
         rooms,
@@ -46,6 +48,7 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
     Apartment.findById(req.params.id)
         .then(apartment => {
+            apartment.planning = String(req.body.planning)
             apartment.number = Number(req.body.number);
             apartment.floor = Number(req.body.floor);
             apartment.rooms = Number(req.body.rooms);
@@ -59,6 +62,6 @@ router.route('/update/:id').post((req, res) => {
                 .catch(err => res.status(400).json('Error: ' + err));
         })
         .catch(err => res.status(400).json('Error: ' + err));
-});
+})
 
 module.exports = router;

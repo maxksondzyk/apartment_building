@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const apartmentSchema = new Schema({
+    planning:{type: String, required: true},
     number: {
         type: Number,
         required: true,
