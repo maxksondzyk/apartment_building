@@ -1,5 +1,5 @@
 .main-window {
-    background-image: url("../images/house.jpg");
+    /*background-image: url("../images/house.jpg");*/
     background: rgb(49,64,255);
     background: linear-gradient(45deg, rgba(49,64,255,0.9615196420365021) 0%, rgba(152,37,246,1) 27%, rgba(255,53,247,1) 62%, rgba(255,25,146,1) 100%);
     /*-webkit-background-size: cover;*/
@@ -7,9 +7,14 @@
     /*-o-background-size: cover;*/
     /*background-size: 3px;*/
     /*height: 1934px;*/
-    /*height: 100vh;*/
+    /*height: 100%;*/
+    /*min-height: available;*/
+    min-height: 100vh;
 }
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.row{
+    margin: 0;
 }

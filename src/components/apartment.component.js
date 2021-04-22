@@ -3,27 +3,21 @@ import axios from 'axios';
 
 import "../styles/apartment.styles.css"
 
-import apt21 from '../images/apt21_1.png'
-import apt22 from '../images/apt22_1.png'
-import apt23 from '../images/apt23_1.png'
-import apt24 from '../images/apt24.png'
-import apt25 from '../images/apt25_1.png'
-import apt26 from '../images/apt26.png'
 
 
 let typeApt = "";
 
-const AnApartment = props => (
-    <tr>
-        <td>{props.apartment.number}</td>
-        <td>{props.apartment.floor}</td>
-        <td>{props.apartment.rooms}</td>
-        <td>{props.apartment.total_area}</td>
-        <td>{props.apartment.living_area}</td>
-        <td>{props.apartment.availability}</td>
-        <td>{props.apartment.price}</td>
-    </tr>
-);
+// const AnApartment = props => (
+//     <tr>
+//         <td>{props.apartment.number}</td>
+//         <td>{props.apartment.floor}</td>
+//         <td>{props.apartment.rooms}</td>
+//         <td>{props.apartment.total_area}</td>
+//         <td>{props.apartment.living_area}</td>
+//         <td>{props.apartment.availability}</td>
+//         <td>{props.apartment.price}</td>
+//     </tr>
+// );
 
 const ApartmentFloor = props => (
     <option>{props.apartment.floor}</option>
@@ -64,22 +58,22 @@ export default class Apartment extends Component {
    render() {
         let image;
         if(typeApt==="apt21") {
-            image = apt21;
+            image = "https://i.ibb.co/ZxP9DcS/apt21.png";
         }
         else if(typeApt==="apt22"){
-            image = apt22;
+            image = "https://i.ibb.co/n60rPFs/apt22.png";
         }
         else if(typeApt==="apt23"){
-            image = apt23;
+            image = "https://i.ibb.co/xzLzCqK/apt23.png";
         }
         else if(typeApt==="apt24"){
-            image = apt24;
+            image = "https://i.ibb.co/9nQ7080/apt24.png";
         }
         else if(typeApt==="apt25"){
-            image = apt25;
+            image = "https://i.ibb.co/bXWrByx/apt25.png";
         }
         else {
-            image = apt26;
+            image = "https://i.ibb.co/XbNXjsg/apt26.png";
         }
        return (
            <div>

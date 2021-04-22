@@ -8,13 +8,13 @@ export default class Gallery extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <img className="gimg" src={house2014} width={300} alt="Slide 1"/>
+                <img className="gimg" src={house2014} alt="Slide 1"/>
                 <h3>2014</h3>
-                <img className="gimg" src={house2015} width={300} alt="Slide 1"/>
+                <img className="gimg" src={house2015} alt="Slide 1"/>
                 <h3>2015</h3>
-                <img className="gimg" src={house2016} width={300} alt="Slide 1"/>
+                <img className="gimg" src={house2016} alt="Slide 1"/>
                 <h3>2016</h3>
-                <img className="gimg" src={house2017} width={300} alt="Slide 1"/>
+                <img className="gimg" src={house2017} alt="Slide 1"/>
                 <h3>2017</h3>
             </div>
             // <div id="carousel-example-generic" className="carousel slide">

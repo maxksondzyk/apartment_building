@@ -16,18 +16,18 @@ import Apartment from "./components/apartment.component";
 function App() {
   return (
       <div className="main-window">
-      <Router>
-              <Navbar />
-              <br/>
-              <Route path="/" />
-              <Route path="/apartments" exact component={Plan} />
-              <Route path="/apartment" exact component={Apartment} />
-              <Route path="/contacts" exact component={Contacts} />
-              <Route path="/about" exact component={About} />
-              <Route path="/location" exact component={BuildingLocation} />
-              <Route path="/construction-progress" exact component={ConstructionProgress} />
-              <Footer />
-      </Router>
+        <Router>
+            <Navbar />
+            <br/>
+            <Route path="/" />
+            <Route path="/apartments" exact component={Plan} />
+            <Route path="/apartment" exact component={Apartment} />
+            <Route path="/contacts" exact component={Contacts} />
+            <Route path="/about" exact component={About} />
+            <Route path="/location" exact component={BuildingLocation} />
+            <Route path="/construction-progress" exact component={ConstructionProgress} />
+            <Footer />
+        </Router>
       </div>
 
   );
