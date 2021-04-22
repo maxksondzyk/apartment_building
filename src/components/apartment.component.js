@@ -6,6 +6,7 @@ import "../styles/apartment.styles.css"
 
 
 let typeApt = "";
+let floor = ""
 
 // const AnApartment = props => (
 //     <tr>
@@ -31,7 +32,9 @@ export default class Apartment extends Component {
 
         if(props.location.state){
             typeApt = props.location.state;
+            floor = props.location.floor;
         }
+        alert(floor)
 
 
         console.log(props.location.state);

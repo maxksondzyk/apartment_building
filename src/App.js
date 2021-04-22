@@ -12,22 +12,28 @@ import ConstructionProgress from "./components/construction-progress.component";
 import Footer from "./components/footer.component";
 import Plan from "./components/plan.component";
 import Apartment from "./components/apartment.component";
+import Building from "./components/building.component";
 
 function App() {
   return (
       <div className="main-window">
-        <Router>
-            <Navbar />
-            <br/>
-            <Route path="/" />
-            <Route path="/apartments" exact component={Plan} />
-            <Route path="/apartment" exact component={Apartment} />
-            <Route path="/contacts" exact component={Contacts} />
-            <Route path="/about" exact component={About} />
-            <Route path="/location" exact component={BuildingLocation} />
-            <Route path="/construction-progress" exact component={ConstructionProgress} />
+          <div className={"content"}>
+            <Router>
+                <Navbar />
+                <br/>
+                <Route path="/" />
+                <Route path="/apartments" exact component={Plan} />
+                <Route path="/apartment" exact component={Apartment} />
+                <Route path="/contacts" exact component={Contacts} />
+                <Route path="/about" exact component={About} />
+                <Route path="/location" exact component={BuildingLocation} />
+                <Route path="/construction-progress" exact component={ConstructionProgress} />
+                <Route path="/building" exact component={Building} />
+            </Router>
+          </div>
+          <div className={"footer-content"}>
             <Footer />
-        </Router>
+          </div>
       </div>
 
   );

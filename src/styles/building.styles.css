@@ -1,12 +1,12 @@
-.apt:hover {
+.floor:hover {
     border: solid 1px black;
     fill-opacity: 0.5;
 }
-.apt {
+.floor {
     fill: black;
     fill-opacity: 0;
-    stroke: black;
-    stroke-width: 13;
+    /*stroke: black;*/
+    stroke-width: 1;
     stroke-opacity: 1;
     fill-rule: evenodd;
     transition: all 0.3s;
@@ -32,10 +32,10 @@ svg {
 path{
     pointer-events: auto;
 }
-.planImg {
+.bplanImg {
     position: absolute;
-    top: -5%;
-    left: 2.1%;
-    width: inherit;
-    padding: 5.7%;
+    top: -12%;
+    left: 2.3%;
+    width: 104.3%;
+    padding: 5.9%;
 }

@@ -4,8 +4,20 @@ import "../styles/plan.styles.css"
 import { Link } from 'react-router-dom';
 import planImg from '../images/main_plan.png'
 
+let floor = ""
 class Plan extends React.Component {
+    constructor(props) {
+        super(props);
 
+
+        if(props.location.state){
+            floor = props.location.state;
+        }
+
+
+        console.log(props.location.state);
+        this.state = { apartments: []};
+    }
     render() {
 
         return (
@@ -17,7 +29,8 @@ class Plan extends React.Component {
                         <Link to={
                         {
                             pathname: '/apartment',
-                            state:"apt22"
+                            state:"apt22",
+                            floor:floor
                         }
                         }>
                         <path d="m587.75 2380.85 -0.65 -873.78 997.33 -0.85v0.00 445.88l163.65 0.62 0.31 427.47z"
@@ -27,7 +40,8 @@ class Plan extends React.Component {
                         <Link to={
                             {
                                 pathname: '/apartment',
-                                state:"apt23"
+                                state:"apt23",
+                                floor:floor
                             }
                         }>
                         <path d="m1816.74 607.25 1321.52 0.20 0.20 1066.01 -924.48 0.19 -0.08 -908.79 -396.95 -0.15z"
@@ -37,7 +51,8 @@ class Plan extends React.Component {
                         <Link to={
                             {
                                 pathname: '/apartment',
-                                state:"apt24"
+                                state:"apt24",
+                                floor:floor
                             }
                         }>
                         <path d="m3164.73 1673.24 0.43 -1065.17 868.49 -0.31 -0.31 1066.35z"
@@ -47,7 +62,8 @@ class Plan extends React.Component {
                         <Link to={
                             {
                                 pathname: '/apartment',
-                                state:"apt21"
+                                state:"apt21",
+                                floor:floor
                             }
                         }>
                         <path d="m587.75 1480.81 -0.22 -873.23 1203.17 0.44v0.00 913.55l-179.79 -0.44 -0.22 -41.41z"
@@ -57,7 +73,8 @@ class Plan extends React.Component {
                         <Link to={
                             {
                                 pathname: '/apartment',
-                                state:"apt26"
+                                state:"apt26",
+                                floor:floor
                             }
                         }>
                         <path
@@ -68,7 +85,8 @@ class Plan extends React.Component {
                         <Link to={
                             {
                                 pathname: '/apartment',
-                                state:"apt25"
+                                state:"apt25",
+                                floor:floor
                             }
                         }>
                         <path
@@ -78,6 +96,7 @@ class Plan extends React.Component {
                         </Link>
                     </g>
                 </svg>
+
             </div>
         );
     }

@@ -9,7 +9,10 @@
     /*height: 1934px;*/
     /*height: 100%;*/
     /*min-height: available;*/
-    min-height: 100vh;
+    /*min-height: 100vh;*/
+}
+.content{
+    min-height: calc(100vh - 90px)
 }
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
