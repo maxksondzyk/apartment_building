@@ -11,11 +11,13 @@
     fill-rule: evenodd;
     transition: all 0.3s;
 }
-.cont{
+.cont-building{
     position: relative;
     transition: all 0.5s;
     width: 96%;
-    padding-top: 48%;
+    margin-top: 2%;
+    height: 75vw
+    /*display: inline-block;*/
 }
 .main_plan{
     /*width: 300px;*/
@@ -36,6 +38,6 @@ path{
     position: absolute;
     top: -12%;
     left: 2.3%;
-    width: 104.3%;
+    width: 100%;
     padding: 5.9%;
 }

@@ -67,7 +67,7 @@ export default class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link to="/apartments" className="nav-link">Apartments</Link>
+                            <Link to="/building" className="nav-link">Apartments</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/contacts" className="nav-link">Contacts</Link>

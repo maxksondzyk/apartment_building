@@ -6,10 +6,10 @@ import {Link} from "react-router-dom";
 class Building extends React.Component {
     render() {
         return(
-            <div className={"cont"}>
+            <div className={"cont-building"}>
                 <img className="bplanImg" src={"https://i.ibb.co/KsgvPHt/building.png"} alt={"Building plan"}/>
-                <svg viewBox="-30 0 370 700">
-                    <g transform="scale(0.3)">
+                <svg viewBox="-30 13 370 250">
+                    <g transform="scale(0.286)">
                         <Link to={
                             {
                                 pathname: '/apartments',
