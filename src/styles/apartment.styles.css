@@ -4,6 +4,9 @@ img {
     filter: drop-shadow(5px 5px 0 black)
     drop-shadow(-1px -1px 0 black);
 }
-.plan-div{
-    /*margin: 1em;*/
+.aptInfo {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border: solid black 5px;
 }

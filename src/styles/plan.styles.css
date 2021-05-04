@@ -39,3 +39,8 @@ path{
     width: inherit;
     padding: 5.7%;
 }
+
+.floorNum{
+    background-color: white;
+    padding: 0.2em 0.2em 0.2em 2em;
+}
