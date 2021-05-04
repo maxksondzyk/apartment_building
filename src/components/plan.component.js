@@ -33,7 +33,7 @@ class Plan extends React.Component {
                 </div>
                 <div className="cont">
                     <img className="planImg" src={"https://i.ibb.co/pw17bbw/Main-plan.png"} alt={"Apartments plan"}/>
-                    <svg viewBox="0 50 900 400">
+                    <svg viewBox="0 50 900 400" className={"planSvg"}>
 
                         <g transform="scale(0.16)">
                             <Link to={

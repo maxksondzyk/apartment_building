@@ -26,3 +26,6 @@
 .container{
     border: solid 5px;
 }
+hr.solid {
+    border-top: 3px solid #000;
+}

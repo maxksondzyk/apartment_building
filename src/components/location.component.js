@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../styles/location.styles.css"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default class BuildingLocation extends Component {
     render() {
         return (
@@ -9,7 +9,7 @@ export default class BuildingLocation extends Component {
                     <div className="col-md-7 rounded">
                         <div className="map-responsive rounded">
                             <iframe className="map rounded"
-                                src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.3959982758083!2d30.511044915560973!3d50.433724196451294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf6fbd3ff4ff%3A0xa75dee4b07deefcd!2sChicago%2044!5e0!3m2!1sen!2sua!4v1615107703276!5m2!1sen!2sua"}
+                                src={"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2761.9966021709834!2d30.481560462985122!3d50.454160707637676!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x21eb32889e35a54!2z0JbQmiBGb3J3YXJk!5e0!3m2!1sen!2sua!4v1620167213792!5m2!1sen!2sua"}
                                 width="600" height="450" allowFullScreen
                                 title={"Location"}>
                             </iframe>
@@ -17,8 +17,18 @@ export default class BuildingLocation extends Component {
                     </div>
                     <div className="col-md-4">
                         <h3>
-                            <small className="text-muted">Antonovycha St, 44</small>
+                            <FontAwesomeIcon icon = {["fas","map-marker-alt"]}/> Marshala Rybalka St, 5Б
                         </h3>
+                        <hr className="solid"/>
+                        <h4 className={"text-muted"}>
+                            <FontAwesomeIcon icon = {["fas","subway"]}/> Lukianivska
+                        </h4>
+                        <h4 className={"text-muted"}>
+                            <FontAwesomeIcon icon = {["fas","subway"]}/> Politekhnichnyi Instytut
+                        </h4>
+                        <h4 className={"text-muted"}>
+                            <FontAwesomeIcon icon = {["fas","car"]}/> 15 min to city center
+                        </h4>
                     </div>
                 </div>
             </div>

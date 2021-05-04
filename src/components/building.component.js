@@ -26,7 +26,7 @@ class Building extends React.Component {
         return(
             <div className={"cont-building"}>
                 <img className="bplanImg rounded" src={"https://i.ibb.co/KsgvPHt/building.png"} alt={"Building plan"}/>
-                <svg viewBox="-19 0 370 250">
+                <svg viewBox="-19 0 370 250" className={"buildingSvg"}>
                     {/*<text x="120" y="125" fill="white">APT21</text>*/}
                     <g transform="scale(0.292)">
                         <Link to={

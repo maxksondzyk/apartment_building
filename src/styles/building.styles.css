@@ -33,7 +33,7 @@
     /*top: 100px;*/
     /*left: 0;*/
 }
-svg {
+.buildingSvg {
     position: absolute;
     top: 0;
     left: 0;
