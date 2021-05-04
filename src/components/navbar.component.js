@@ -57,7 +57,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav className="navigation navbar navbar-expand-lg navbar-light bg-light rounded-bottom">
-                <a className="navbar-brand" href="/building">MK-apartments</a>
+                <a className="navbar-brand" href="/building">Forward</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">

@@ -25,10 +25,10 @@ class Building extends React.Component {
     render() {
         return(
             <div className={"cont-building"}>
-                <img className="bplanImg" src={"https://i.ibb.co/KsgvPHt/building.png"} alt={"Building plan"}/>
-                <svg viewBox="-30 13 370 250">
+                <img className="bplanImg rounded" src={"https://i.ibb.co/KsgvPHt/building.png"} alt={"Building plan"}/>
+                <svg viewBox="-19 0 370 250">
                     {/*<text x="120" y="125" fill="white">APT21</text>*/}
-                    <g transform="scale(0.286)">
+                    <g transform="scale(0.292)">
                         <Link to={
                             {
                                 pathname: '/apartments',
@@ -39,7 +39,7 @@ class Building extends React.Component {
                               data-code="floor2"
                               className="floor"
                               />
-                            <text x="0" y="685" fontFamily={"Helvetica"} fontSize={50} fill="white">2</text>
+                            <text x="14" y="685" fontFamily={"Helvetica"} fontSize={35} fill="white">2</text>
                         </Link>
                         <Link to={
                             {
@@ -51,7 +51,7 @@ class Building extends React.Component {
                               data-code="floor3"
                               className="floor"
                               />
-                            <text x="0" y="625" fontFamily={"Helvetica"} fontSize={50} fill="white">3</text>
+                            <text x="14" y="625" fontFamily={"Helvetica"} fontSize={35} fill="white">3</text>
                         </Link>
                         <Link to={
                             {
@@ -63,7 +63,7 @@ class Building extends React.Component {
                               data-code="floor4"
                               className="floor"
                               />
-                            <text x="0" y="565" fontFamily={"Helvetica"} fontSize={50} fill="white">4</text>
+                            <text x="14" y="565" fontFamily={"Helvetica"} fontSize={35} fill="white">4</text>
                         </Link>
                         <Link to={
                             {
@@ -75,7 +75,7 @@ class Building extends React.Component {
                               data-code="floor5"
                               className="floor"
                               />
-                            <text x="0" y="505" fontFamily={"Helvetica"} fontSize={50} fill="white">5</text>
+                            <text x="14" y="505" fontFamily={"Helvetica"} fontSize={35} fill="white">5</text>
                         </Link>
                         <Link to={
                             {
@@ -87,7 +87,7 @@ class Building extends React.Component {
                               data-code="floor6"
                               className="floor"
                               />
-                            <text x="0" y="445" fontFamily={"Helvetica"} fontSize={50} fill="white">6</text>
+                            <text x="14" y="445" fontFamily={"Helvetica"} fontSize={35} fill="white">6</text>
                         </Link>
                         <Link to={
                             {
@@ -99,7 +99,7 @@ class Building extends React.Component {
                               data-code="floor7"
                               className="floor"
                               />
-                            <text x="0" y="385" fontFamily={"Helvetica"} fontSize={50} fill="white">7</text>
+                            <text x="14" y="385" fontFamily={"Helvetica"} fontSize={35} fill="white">7</text>
                         </Link>
                         <Link to={
                             {
@@ -111,7 +111,7 @@ class Building extends React.Component {
                               data-code="floor8"
                               className="floor"
                               />
-                            <text x="0" y="325" fontFamily={"Helvetica"} fontSize={50} fill="white">8</text>
+                            <text x="14" y="325" fontFamily={"Helvetica"} fontSize={35} fill="white">8</text>
                         </Link>
                         <Link to={
                             {
@@ -123,7 +123,7 @@ class Building extends React.Component {
                               data-code="floor9"
                               className="floor"
                               />
-                            <text x="0" y="265" fontFamily={"Helvetica"} fontSize={50} fill="white">9</text>
+                            <text x="14" y="265" fontFamily={"Helvetica"} fontSize={35} fill="white">9</text>
                         </Link>
                         <Link to={
                             {
@@ -135,7 +135,7 @@ class Building extends React.Component {
                               data-code="floor10"
                               className="floor"
                               />
-                            <text x="-26" y="205" fontFamily={"Helvetica"} fontSize={50} fill="white">10</text>
+                            <text x="4" y="205" fontFamily={"Helvetica"} fontSize={35} fill="white">10</text>
                         </Link>
                         <Link to={
                             {
@@ -147,7 +147,7 @@ class Building extends React.Component {
                               data-code="floor1"
                               className="floor"
                               />
-                            <text x="0" y="745" fontFamily={"Helvetica"} fontSize={50} fill="white">1</text>
+                            <text x="14" y="745" fontFamily={"Helvetica"} fontSize={35} fill="white">1</text>
                         </Link>
                     </g>
                 </svg>

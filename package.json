@@ -24,6 +24,7 @@
     "jquery": "^3.5.1",
     "jsdom": "^16.4.0",
     "jvectormap-next": "^3.0.0",
+    "node": "^16.0.0",
     "nodemailer": "^6.5.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -31,6 +32,7 @@
     "react-jvectormap": "0.0.16",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "swiper": "^6.5.9",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

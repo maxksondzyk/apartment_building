@@ -15,8 +15,16 @@
     position: relative;
     transition: all 0.5s;
     width: 96%;
-    margin-top: 2%;
-    height: 75vw
+    /*margin: 2em;*/
+    /*margin-top: 2%;*/
+    /*margin: 3em;*/
+    margin: 0 auto;
+    height: 75vw;
+    padding-left: 5%;
+    margin-bottom: 2em;
+    /*background-color: black;*/
+    /*padding: 10em;*/
+    /*width: fit-content;*/
     /*display: inline-block;*/
 }
 .main_plan{
@@ -36,9 +44,12 @@ path{
 }
 .bplanImg {
     position: absolute;
-    top: -12%;
-    left: 2.3%;
-    width: 100%;
-    margin-top: 6%;
-    padding: 0 5.9% 5.9%;
+    /*top: 0%;*/
+    /*left: 2.3%;*/
+    width: 90%;
+    /*margin-top: 6%;*/
+    /*padding: 0 5.9% 5.9%;*/
+
+    background-color: rgba(255,255,255,0.5);
+    /*border: solid black 0.1em;*/
 }

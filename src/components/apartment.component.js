@@ -75,7 +75,7 @@ export default class Apartment extends Component {
                {/*</table>*/}
                <div className="row">
                    <div className="col-md-6 plan-div">
-                       <img src={image} width="100%" alt="Apartment plan"/>
+                       <img className={"aptImage"} src={image} width="100%" alt="Apartment plan"/>
                    </div>
                    <div className="col-sm-5">
                        {/*<label htmlFor="exampleFormControlSelect1">Floor</label>*/}
