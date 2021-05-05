@@ -4,11 +4,14 @@ import "../styles/apartment.styles.css"
 
 const AnApartment = props => (
     <div className={"aptInfo"}>
-        <h3>Number: {props.apartment.number}</h3>
-        <h3>Floor: {props.apartment.floor}</h3>
-        <h3>Rooms: {props.apartment.rooms}</h3>
-        <h3>Area: {props.apartment.total_area}</h3>
-        <h3>Price: {props.apartment.price}</h3>
+        <div className={"container cont-apt-num"}>
+            {/*<h3>Number</h3>*/}
+            <h1 className={"h1-num"}>Apartment {props.apartment.number}</h1>
+        </div>
+        <h4>{props.apartment.floor} floor</h4>
+        <h4>{props.apartment.rooms} rooms</h4>
+        <h4>{props.apartment.total_area} sqft</h4>
+        <h4>{props.apartment.price}$</h4>
     </div>
 );
 
@@ -74,16 +77,13 @@ export default class Apartment extends Component {
                {/*    </tbody>*/}
                {/*</table>*/}
                <div className="row">
-                   <div className="col-md-6 plan-div">
+                   <div className="col-md-5 plan-div">
                        <img className={"aptImage"} src={image} width="100%" alt="Apartment plan"/>
                    </div>
                    <div className="col-sm-5">
-                       {/*<label htmlFor="exampleFormControlSelect1">Floor</label>*/}
-                       {/*<select className="form-control" id="exampleFormControlSelect1">*/}
                            {
                                this.apartmentsList()
                            }
-                       {/*</select>*/}
                    </div>
                </div>
            </div>

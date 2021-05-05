@@ -5,6 +5,10 @@
 }
 .fb{
     background: rgb(49,64,255);
-    background: linear-gradient(45deg, rgba(49,64,255,0.9615196420365021) 0%, rgba(152,37,246,1) 27%, rgba(255,53,247,1) 62%, rgba(255,25,146,1) 100%);
+    /*background: linear-gradient(45deg, rgba(49,64,255,0.9615196420365021) 0%, rgba(152,37,246,1) 27%, rgba(255,53,247,1) 62%, rgba(255,25,146,1) 100%);*/
     border: none;
+}
+.link-icon{
+    color: black;
+    margin-right: 0.5em;
 }

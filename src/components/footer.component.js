@@ -8,6 +8,7 @@ export default class Footer extends Component {
         return (
             <footer className="footer rounded-top">
                 <div className="text-center p-3">
+                    <h3 className={"text-muted"}>Maksym Ksondzyk</h3>
                 </div>
 
             </footer>

@@ -6,10 +6,10 @@
 /*}*/
 .aptImage{
     /*max-height: 80vh;*/
-    /*max-width: 80vh;*/
+    /*max-width: 90%;*/
     padding: 1em;
-    margin: 1em;
-    margin-top: 0em;
+    margin-bottom: 1.6em;
+    margin-top: 0;
     border: solid black 5px;
     background-color: white;
 
@@ -23,8 +23,17 @@
     /*max-width: 80vh;*/
 }
 .aptInfo {
-    background-color: white;
+    background-color: rgba(255,255,255,0.8);;
     padding: 1em;
     margin: 0 1em 1em;
     border: solid black 5px;
+    width: 15em;
+}
+.cont-apt-num{
+    width: fit-content;
+    background-color: rgba(0,0,0,1);
+
+}
+.h1-num{
+    color: white;
 }

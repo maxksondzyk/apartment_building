@@ -21,3 +21,11 @@
 .row{
     margin: 0;
 }
+.pageLabel{
+    background-color: rgba(255,255,255,0.7);
+    padding: 0.2em 2em 0.2em 2em;
+    margin-bottom: 2em;
+    width: fit-content;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default class BuildingLocation extends Component {
     render() {
         return (
+            <>
+            <div className={"pageLabel"}>
+                <h1>Location</h1>
+            </div>
             <div className="container container-fluid rounded">
                 <div className="row rounded">
                     <div className="col-md-7 rounded">
@@ -32,6 +36,7 @@ export default class BuildingLocation extends Component {
                     </div>
                 </div>
             </div>
+                </>
         );
     }
 }
