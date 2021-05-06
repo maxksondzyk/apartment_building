@@ -6,12 +6,6 @@
 .map-responsive > *{
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -23,9 +17,15 @@
     padding: 0.2em;
     border: none;
 }
-.container{
+.location-container{
+    background-color: white;
+    padding: 1em 0;
     border: solid 5px;
+    margin-bottom: 2em;
 }
 hr.solid {
     border-top: 3px solid #000;
+}
+.h3-address {
+    margin-top: 0.5em;
 }

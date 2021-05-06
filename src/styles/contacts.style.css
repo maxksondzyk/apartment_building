@@ -1,7 +1,9 @@
-.container{
+.contacts-container{
     background-color: white;
     padding: 1em;
-
+    width: fit-content;
+    border: solid 5px;
+    margin-bottom: 2em;
 }
 .fb{
     background: rgb(49,64,255);
@@ -11,4 +13,10 @@
 .link-icon{
     color: black;
     margin-right: 0.5em;
+}
+.contacts-div{
+    background: rgba(255,255,255,0.5);
+    padding: 2em 2em 0;
+    /*width: fit-content;*/
+    margin-bottom: 2em;
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "../styles/location.styles.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { HiLocationMarker } from 'react-icons/hi'
+import { IoMdSubway } from 'react-icons/io'
+import { FaCar } from 'react-icons/fa'
 export default class BuildingLocation extends Component {
     render() {
         return (
@@ -8,7 +10,7 @@ export default class BuildingLocation extends Component {
             <div className={"pageLabel"}>
                 <h1>Location</h1>
             </div>
-            <div className="container container-fluid rounded">
+            <div className="location-container container container-fluid rounded">
                 <div className="row rounded">
                     <div className="col-md-7 rounded">
                         <div className="map-responsive rounded">
@@ -19,19 +21,19 @@ export default class BuildingLocation extends Component {
                             </iframe>
                         </div>
                     </div>
-                    <div className="col-md-4">
-                        <h3>
-                            <FontAwesomeIcon icon = {["fas","map-marker-alt"]}/> Marshala Rybalka St, 5Б
+                    <div className="col-md-5">
+                        <h3 className={"h3-address"}>
+                            <HiLocationMarker/> Marshala Rybalka St, 5Б
                         </h3>
                         <hr className="solid"/>
                         <h4 className={"text-muted"}>
-                            <FontAwesomeIcon icon = {["fas","subway"]}/> Lukianivska
+                            <IoMdSubway/> Lukianivska
                         </h4>
                         <h4 className={"text-muted"}>
-                            <FontAwesomeIcon icon = {["fas","subway"]}/> Politekhnichnyi Instytut
+                            <IoMdSubway/> Politekhnichnyi Instytut
                         </h4>
                         <h4 className={"text-muted"}>
-                            <FontAwesomeIcon icon = {["fas","car"]}/> 15 min to city center
+                            <FaCar/> 15 min to city center
                         </h4>
                     </div>
                 </div>
