@@ -6,7 +6,10 @@ const AnApartment = props => (
     <div className={"aptInfo"}>
         <div className={"container cont-apt-num"}>
             {/*<h3>Number</h3>*/}
-            <h1 className={"h1-num"}>Apartment {props.apartment.number}</h1>
+            {props.apartment.planning === "storage" ?
+                <h1 className={"h1-num"}>Storage unit {props.apartment.number}</h1>
+                : <h1 className={"h1-num"}>Apartment {props.apartment.number}</h1>
+            }
         </div>
         <h4>{props.apartment.floor} floor</h4>
         <h4>{props.apartment.rooms} rooms</h4>
@@ -52,9 +55,10 @@ export default class Apartment extends Component {
                 image = "https://i.ibb.co/9nQ7080/apt24.png";
             } else if (this.state.apartment.planning === "apt25") {
                 image = "https://i.ibb.co/bXWrByx/apt25.png";
-            } else {
+            } else if (this.state.apartment.planning === "apt22") {
                 image = "https://i.ibb.co/XbNXjsg/apt26.png";
             }
+            else image = "https://i.ibb.co/HD3QdX5/storage.png";
         }
        return (
            <div>
@@ -78,9 +82,9 @@ export default class Apartment extends Component {
                {/*</table>*/}
                <div className="row">
                    <div className="col-md-5 plan-div">
-                       <img className={"aptImage"} src={image} width="100%" alt="Apartment plan"/>
+                       <img className={"aptImage"} src={image} width={this.state.apartment.planning === "storage" ? "50%" : "100%"} alt="Apartment plan"/>
                    </div>
-                   <div className="col-sm-5">
+                   <div className="col-sm-5 info-div">
                            {
                                this.apartmentsList()
                            }

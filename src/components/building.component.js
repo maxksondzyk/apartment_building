@@ -18,7 +18,7 @@ class Building extends React.Component {
 
     getApartments(floor){
         return this.state.apartments.filter(currentApartment =>
-            currentApartment.floor === floor
+            currentApartment.floor === floor && currentApartment.availability === true
         )
     }
 

@@ -12,14 +12,13 @@
     margin-top: 0;
     border: solid black 5px;
     background-color: white;
-
     /*-webkit-filter: drop-shadow(5px 5px 0 black)*/
     /*drop-shadow(-1px -1px 0 black);*/
     /*filter: drop-shadow(5px 5px 0 black)*/
     /*drop-shadow(-1px -1px 0 black);*/
 }
 .plan-div{
-
+    /*align-content: center;*/
     /*max-width: 80vh;*/
 }
 .aptInfo {

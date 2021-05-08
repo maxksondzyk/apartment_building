@@ -21,7 +21,7 @@ function App() {
             <Router>
                 <Navbar />
                 <br/>
-                <Route path="/" />
+                <Route path="/" exact component = {Building}/>
                 <Route path="/apartments" exact component={Plan} />
                 <Route path="/apartment" exact component={Apartment} />
                 <Route path="/contacts" exact component={Contacts} />

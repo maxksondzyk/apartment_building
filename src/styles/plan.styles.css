@@ -2,6 +2,7 @@
     border: solid 1px black;
     fill-opacity: 0.5;
 }
+
 .apt {
     fill: black;
     fill-opacity: 0;
@@ -11,27 +12,35 @@
     fill-rule: evenodd;
     transition: all 0.3s;
 }
-.cont{
+
+.apt-taken {
+    fill: grey;
+    fill-opacity: 0.5;
+    stroke: black;
+    stroke-width: 13;
+    stroke-opacity: 1;
+    fill-rule: evenodd;
+    transition: all 0.3s;
+}
+
+.cont {
     position: relative;
     transition: all 0.5s;
     width: 96%;
     padding-top: 48%;
 }
-.main_plan{
-    /*width: 300px;*/
-    /*position: absolute;*/
-    /*top: 100px;*/
-    /*left: 0;*/
-}
+
 .planSvg {
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
 }
-path{
+
+path {
     pointer-events: auto;
 }
+
 .planImg {
     position: absolute;
     top: -5%;
@@ -40,7 +49,7 @@ path{
     padding: 5.7%;
 }
 
-.floorNum{
+.floorNum {
     background-color: rgba(255,255,255,0.8);
     padding: 0.2em 0.2em 0.2em 2em;
 }
