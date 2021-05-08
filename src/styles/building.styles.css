@@ -11,6 +11,14 @@
     fill-rule: evenodd;
     transition: all 0.3s;
 }
+.floor-taken {
+    fill: grey;
+    fill-opacity: 0.5;
+    /*stroke: black;*/
+    stroke-width: 1;
+    stroke-opacity: 1;
+    fill-rule: evenodd;
+}
 .cont-building{
     position: relative;
     transition: all 0.5s;
