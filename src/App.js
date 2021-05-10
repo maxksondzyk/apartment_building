@@ -11,7 +11,7 @@ import BuildingLocation from "./components/location.component";
 import ConstructionProgress from "./components/construction-progress.component";
 import Footer from "./components/footer.component";
 import Plan from "./components/plan.component";
-import Apartment from "./components/apartment.component";
+import Unit from "./components/unit.component";
 import Building from "./components/building.component";
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
                 <Navbar />
                 <br/>
                 <Route path="/" exact component = {Building}/>
-                <Route path="/apartments" exact component={Plan} />
-                <Route path="/apartment" exact component={Apartment} />
+                <Route path="/units" exact component={Plan} />
+                <Route path="/unit" exact component={Unit} />
                 <Route path="/contacts" exact component={Contacts} />
                 <Route path="/about" exact component={About} />
                 <Route path="/location" exact component={BuildingLocation} />

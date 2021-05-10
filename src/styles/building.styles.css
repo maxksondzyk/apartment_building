@@ -9,9 +9,9 @@
     stroke-width: 1;
     stroke-opacity: 1;
     fill-rule: evenodd;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
-.floor-taken {
+.floor_taken {
     fill: grey;
     fill-opacity: 0.5;
     /*stroke: black;*/
@@ -19,17 +19,16 @@
     stroke-opacity: 1;
     fill-rule: evenodd;
 }
-.cont-building{
+.building-container{
     position: relative;
     transition: all 0.5s;
     width: 96%;
-    margin: 0 auto;
     height: 75vw;
     padding-left: 5%;
-    margin-bottom: 2em;
+    margin: 0 auto 2em;
 }
 
-.buildingSvg {
+.building-svg {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,7 +37,7 @@
 path{
     pointer-events: auto;
 }
-.bplanImg {
+.building-plan-img {
     position: absolute;
     width: 90%;
     background-color: rgba(255,255,255,0.5);

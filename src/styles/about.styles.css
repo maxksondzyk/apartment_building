@@ -1,1 +1,7 @@
-
+.about-container{
+    background-color: white;
+    padding: 1em;
+    /*width: 25em;*/
+    border: solid 5px;
+    margin-bottom: 2em;
+}

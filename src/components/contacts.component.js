@@ -16,22 +16,22 @@ export default class Contacts extends Component {
                     <h1>Contacts</h1>
                 </div>
                 <div className={"container"}>
-                    <div className={'row contacts-div rounded'}>
-                        <div className="contacts-container container rounded">
+                    <div className={'row contacts-container rounded'}>
+                        <div className="contacts-div container rounded">
                             <h4>
                                 Contact us
                             </h4>
                             <h4>
                                 <MdMail/>
-                                <small>maksym.ksondzyk@ukma.edu.ua</small>
+                                <a className={"contact-link"} href={"mailto: maksym.ksondzyk@ukma.edu.ua"}><small>maksym.ksondzyk@ukma.edu.ua</small></a>
                             </h4>
                             <h4>
                                 <BsPhone/>
-                                <small>(+380) 99-444-33-99</small>
+                                <a className={"contact-link"} href="tel:+380994443399"><small>(+380) 99-444-33-99</small></a>
                             </h4>
                             <h4>
                                 <BiPhone/>
-                                <small>(044) 444-33-99</small>
+                                <a className={"contact-link"} href="tel: 0444443399"><small>(044) 444-33-99</small></a>
                             </h4>
                             <hr className="solid"/>
                             <h3>
@@ -39,18 +39,18 @@ export default class Contacts extends Component {
                                 <a className={"link-icon"} href="https://www.instagram.com/cat_rob_/">{<FaInstagram/>}</a>
                             </h3>
                         </div>
-                        <div className="contacts-container container rounded">
+                        <div className="contacts-div container rounded">
                             <h4>
                                Sales Departments
                             </h4>
                             <h4>
-                                <small>Kyiv, Hlybochytska st, 13</small>
+                                <a className={"contact-link"} href="https://maps.google.com/?q=Kyiv, Hlybochytska st, 13"><small>Kyiv, Hlybochytska st, 13</small></a>
                             </h4>
                             <h4>
-                                <small>Kyiv, Povitroflotskyi ave, 56</small>
+                                <a className={"contact-link"} href="https://maps.google.com/?q=Kyiv, Povitroflotskyi ave, 56"><small>Kyiv, Povitroflotskyi ave, 56</small></a>
                             </h4>
                             <h4>
-                                <small>Kyiv, Dniprovska naberezhna st, 17В</small>
+                                <a className={"contact-link"} href="https://maps.google.com/?q=Kyiv, Velyka Vasylkivska st, 43"><small>Kyiv, Velyka Vasylkivska st, 43</small></a>
                             </h4>
                             {/*<h4>*/}
                             {/*    <small>Kyiv, Mykhaila Boichuka st, 43</small>*/}

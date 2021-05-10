@@ -1,4 +1,4 @@
-.gImg {
+.gallery-image {
     border-right: solid 5px black;
     border-left: solid 5px black;
     border-bottom: solid 5px black;
@@ -21,7 +21,7 @@
 .swiper-pagination-progressbar-fill{
     background-color: black !important;
 }
-.galleryCont{
+.gallery-container{
     margin-bottom: 5%;
     margin-top: 2%;
     max-width: 140vh;
@@ -29,7 +29,7 @@
 .swiper-slide{
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
-label{
+.gallery-image-label{
     color: white;
     margin-left: 8px;
 }

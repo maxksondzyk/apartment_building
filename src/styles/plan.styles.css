@@ -1,47 +1,42 @@
-.apt:hover {
+.unit:hover {
     border: solid 1px black;
     fill-opacity: 0.5;
 }
 
-.apt {
+.unit {
     fill: black;
     fill-opacity: 0;
     stroke: black;
     stroke-width: 13;
     stroke-opacity: 1;
     fill-rule: evenodd;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
-.apt-taken {
+.unit-taken {
     fill: grey;
     fill-opacity: 0.5;
     stroke: black;
     stroke-width: 13;
     stroke-opacity: 1;
     fill-rule: evenodd;
-    transition: all 0.3s;
 }
 
-.cont {
+.plan-container {
     position: relative;
     transition: all 0.5s;
     width: 96%;
     padding-top: 48%;
 }
 
-.planSvg {
+.plan-svg {
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
 }
 
-path {
-    pointer-events: auto;
-}
-
-.planImg {
+.plan-image {
     position: absolute;
     top: -5%;
     left: 2.1%;
@@ -49,7 +44,7 @@ path {
     padding: 5.7%;
 }
 
-.floorNum {
+.floor-number {
     background-color: rgba(255,255,255,0.8);
     padding: 0.2em 0.2em 0.2em 2em;
 }

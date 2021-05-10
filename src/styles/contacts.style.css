@@ -1,7 +1,7 @@
-.contacts-container{
+.contacts-div{
     background-color: white;
     padding: 1em;
-    width: fit-content;
+    width: 25em;
     border: solid 5px;
     margin-bottom: 2em;
 }
@@ -14,9 +14,12 @@
     color: black;
     margin-right: 0.5em;
 }
-.contacts-div{
+.contacts-container{
     background: rgba(255,255,255,0.5);
     padding: 2em 2em 0;
     /*width: fit-content;*/
     margin-bottom: 2em;
+}
+.contact-link {
+    color: black;
 }
