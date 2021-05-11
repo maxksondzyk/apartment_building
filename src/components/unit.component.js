@@ -5,7 +5,6 @@ import "../styles/unit.styles.css"
 const UnitInfo = props => (
     <div className={"unit-info"}>
         <div className={"container unit-info-container"}>
-            {/*<h3>Number</h3>*/}
             {props.unit.planning === "storage" ?
                 <h1 className={"h1-num"}>Storage unit {props.unit._id}</h1>
                 : <h1 className={"h1-num"}>Apartment {props.unit._id}</h1>

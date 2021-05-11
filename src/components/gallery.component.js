@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../styles/gallery.styles.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
+
 import 'swiper/swiper.min.css';
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
@@ -74,71 +74,6 @@ export default class Gallery extends Component {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            // <div id="carousel-example-generic" className="carousel slide">
-            //     <ol className="carousel-indicators">
-            //         <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
-            //         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            //         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            //     </ol>
-            //
-            //     <div className="carousel-inner">
-            //         <div className="item active">
-
-            //             <div className="carousel-caption">
-            //                 <h1>Slide 1</h1>
-            //                 <p>Slide 1 Description</p>
-            //             </div>
-            //         </div>
-            //
-            //         <div className="item">
-            //             <img src="http://placehold.it/1200x480" alt="Slide 2"/>
-            //             <div className="carousel-caption">
-            //                 <h1>Slide 2</h1>
-            //                 <p>Slide 2 Description</p>
-            //             </div>
-            //         </div>
-            //
-            //         <div className="item">
-            //             <img src="http://placehold.it/1200x480" alt="Slide 3"/>
-            //             <div className="carousel-caption">
-            //                 <h1>Slide 3</h1>
-            //                 <p>Slide 3 Description</p>
-            //             </div>
-            //         </div>
-            //     </div>
-            //
-            //
-            //     <a className="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-            //         <span className="icon-prev"></span>
-            //     </a>
-            //     <a className="right carousel-control" href="#carousel-example-generic" data-slide="next">
-            //         <span className="icon-next"></span>
-            //     </a>
-            // </div>
-            // <div id="Carousel" className="carousel slide">
-            //     <ol className="carousel-indicators">
-            //         <li data-target="Carousel" data-slide-to="0" className="active"></li>
-            //         <li data-target="Carousel" data-slide-to="1"></li>
-            //         <li data-target="Carousel" data-slide-to="2"></li>
-            //     </ol>
-            //
-            //     <div className="carousel-inner">
-            //         <div className="item active">
-            //             <img src={plan} width={100}/>
-            //         </div>
-            //         <div className="item">
-            //             <img src={house} width={100}/>
-            //         </div>
-            //     </div>
-            //
-            //     <a className="left carousel-control" href="#Carousel" data-slide="prev">
-            //         <span className="glyphicon glyphicon-chevron-left"></span>
-            //     </a>
-            //     <a className="right carousel-control" href="#Carousel" data-slide="next">
-            //         <span className="glyphicon glyphicon-chevron-right"></span>
-            //     </a>
-            // </div>
-
         );
     }
 
