@@ -1,6 +1,6 @@
 .floor:hover {
     border: solid 1px black;
-    fill-opacity: 0.5;
+    fill-opacity: 0.7;
 }
 .floor {
     fill: black;
@@ -9,7 +9,7 @@
     stroke-width: 1;
     stroke-opacity: 1;
     fill-rule: evenodd;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 .floor_taken {
     fill: grey;
@@ -26,6 +26,7 @@
     height: 75vw;
     padding-left: 5%;
     margin: 0 auto 2em;
+    font-family: 'Play', sans-serif;
 }
 
 .building-svg {

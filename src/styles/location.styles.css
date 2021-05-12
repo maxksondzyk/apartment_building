@@ -11,20 +11,19 @@
 }
 
 .map{
-    /*border-color: rgb(49,64,255);*/
-    /*background: linear-gradient(to right, blue, deeppink);*/
     background: black;
-    padding: 0.2em;
+    /*padding: 0.12em;*/
     border: none;
 }
 .location-container{
     background-color: white;
     padding: 1em 0;
-    border: solid 5px;
+    border: solid 0.2em;
     margin-bottom: 2em;
+    /*font-family: 'Jura', sans-serif*/
 }
 hr.solid {
-    border-top: 3px solid #000;
+    border-top: 0.1em solid #000;
 }
 .h3-address {
     margin-top: 0.5em;

@@ -4,13 +4,13 @@
 }
 
 .unit {
-    fill: black;
+    fill: #f0911c;
     fill-opacity: 0;
     stroke: black;
     stroke-width: 13;
     stroke-opacity: 1;
     fill-rule: evenodd;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .unit-taken {
@@ -45,6 +45,6 @@
 }
 
 .floor-number {
-    background-color: rgba(255,255,255,0.8);
-    padding: 0.2em 0.2em 0.2em 2em;
+    font-family: 'Play', sans-serif;
+    padding: 0.2em 0.2em 0.2em 3.2em;
 }

@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 
 import "bootstrap/js/src/collapse.js";
 import "../styles/footer.styles.css"
+import Contacts from "./contacts.component";
 
 export default class Footer extends Component {
     render() {
         return (
-            <footer className="footer rounded-top">
-                <div className="text-center p-3">
-                    <h5 className={"text-muted"}>Maksym Ksondzyk</h5>
-                </div>
-
+            <footer className="footer">
+                <Contacts/>
             </footer>
         );
     }

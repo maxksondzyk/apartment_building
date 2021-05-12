@@ -6,16 +6,16 @@ const UnitInfo = props => (
     <div className={"unit-info"}>
         <div className={"container unit-info-container"}>
             {props.unit.planning === "storage" ?
-                <h1 className={"h1-num"}>Storage unit {props.unit._id}</h1>
-                : <h1 className={"h1-num"}>Apartment {props.unit._id}</h1>
+                <h1 className={"h1-num"}>Кладівна {props.unit._id}</h1>
+                : <h1 className={"h1-num"}>Квартира {props.unit._id}</h1>
             }
         </div>
-        <h4>{props.unit.floor} floor</h4>
+        <h5 className={"text-muted"}>{props.unit.floor} поверх</h5>
         {
-            props.unit.rooms === 1 ? <h4>1 room</h4> :  props.unit.rooms === 0 ? <h4>studio</h4> : <h4>{props.unit.rooms} rooms</h4>
+            props.unit.rooms === 1 ? <h5 className={"text-muted"}>1-кімнатна</h5> :  props.unit.rooms === 0 ? <h5 className={"text-muted"}>Студія</h5> : <h5>{props.unit.rooms} кімнати</h5>
         }
-        <h4>{props.unit.total_area} sqft</h4>
-        <h4>{props.unit.price}$</h4>
+        <h5 className={"text-muted"}>{props.unit.total_area} кв.м.</h5>
+        <h5 className={"text-muted"}>{props.unit.price}$</h5>
     </div>
 );
 

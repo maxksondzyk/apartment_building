@@ -4,12 +4,13 @@ export default class About extends Component {
     render() {
         return (
             <>
-                <div className={"pageLabel"}>
-                    <h1>About us</h1>
-                </div>
+
             <div className="about-container container container-fluid rounded">
-                <h5>
-                    Modern residents of the metropolis have different lifestyles. Those who want to live in the city center lead an active lifestyle. We believe that housing for proactive citizens is an integral part of their dynamic lives. LCD Forward - close in spirit with its future progressive residents. We create an active way of housing, not exclusively a residential complex. Not only a place of rest and comfort, but also a territory for comprehensive development. Our desire is to build housing that will become a community of like-minded people who are used to living dynamically. In addition, the complex will be equipped with a modern security system and video surveillance.
+                <div className={"pageLabel"}>
+                    <h1>ПРО НАС</h1>
+                </div>
+                <h5 style={{lineHeight: "1.5"}}>
+                    Сучасні жителі мегаполісу мають різний спосіб життя. Бажаючі жити в центрі міста ведуть активний спосіб життя. Ми вважаємо, що житло для ініціативних громадян є невід’ємною частиною їх динамічного життя. LCD Forward - близький за духом до своїх майбутніх прогресивних мешканців. Ми створюємо активний спосіб житла, а не виключно житловий комплекс. Не тільки місце відпочинку та затишку, а й територія для всебічного розвитку. Наше бажання - побудувати житло, яке стане спільнотою однодумців, які звикли динамічно жити. Крім того, комплекс буде оснащений сучасною системою безпеки та відеоспостереження.
                 </h5>
             </div>
                 </>

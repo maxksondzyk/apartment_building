@@ -77,20 +77,20 @@ export default class UnitsList extends Component {
                             pathname: '/unit',
                             state: unit,
                         }
-                    } style={{textDecoration: 'none'}}>
-                        <div className={"unit-info unit-card"}>
+                    } style={{textDecoration: 'none', color: "black"}}>
+                        <div className={"unit-info unit-card"} >
                             <div className={"container unit-info-container"}>
                                 {unit.planning === "storage" ?
-                                    <h1 className={"h1-num"}>Storage unit {unit._id}</h1>
-                                    : <h1 className={"h1-num"}>Apartment {unit._id}</h1>
+                                    <h1 className={"h1-num"}>Кладівна {unit._id}</h1>
+                                    : <h1 className={"h1-num"}>Квартира {unit._id}</h1>
                                 }
                             </div>
-                            <h4>{unit.floor} floor</h4>
+                            <h5 className={"text-muted"}>{unit.floor} поверх</h5>
                             {
-                                unit.rooms === 1 ? <h4>1 room</h4> :  unit.rooms === 0 ? <h4>studio</h4> : <h4>{unit.rooms} rooms</h4>
+                                unit.rooms === 1 ? <h5 className={"text-muted"}>1-кімнатна</h5> :  unit.rooms === 0 ? <h5 className={"text-muted"}>Студія</h5> : <h5>{unit.rooms} кімнати</h5>
                             }
-                            <h4>{unit.total_area} sqft</h4>
-                            <h4>{unit.price}$</h4>
+                            <h5 className={"text-muted"}>{unit.total_area} кв.м.</h5>
+                            <h5 className={"text-muted"}>{unit.price}$</h5>
                         </div>
                     </Link>
                 );
@@ -106,25 +106,23 @@ export default class UnitsList extends Component {
 
         return (
             <div className="row units-list-container">
-                <div className={"units-filters col-md-4 rounded container-fluid"}>
+                <div className={"units-filters col-md-3 container-fluid"}>
                     <section>
 
                         <section>
-
-                            <h5>Filters</h5>
                             <section className="mb-4">
 
-                                <h6 className="font-weight-bold mb-3">Price</h6>
+                                <h5 className="font-weight-bold mb-3">Ціна</h5>
                                 <form>
                                     <div className="d-flex align-items-center mt-4 pb-1">
                                         <div className="md-form md-outline my-0">
                                             {this.state && <input onChange={event => this.setMin(event.target.value)} type="number" min="10000" max={this.state.max} step="5000" placeholder={10000} className="form-control mb-0"/>}
-                                            <label>Min</label>
+                                            <label>Від</label>
                                         </div>
                                         <p className="px-2 mb-0 text-muted"> - </p>
                                         <div className="md-form md-outline my-0">
                                             {this.state && <input onChange={event => this.setMax(event.target.value)} type="number" min={this.state.min} max="70000" step="5000" placeholder={70000} className="form-control mb-0"/>}
-                                            <label>Max</label>
+                                            <label>До</label>
                                         </div>
                                     </div>
                                 </form>
@@ -133,80 +131,80 @@ export default class UnitsList extends Component {
 
                             <section className="mb-4">
 
-                                <h6 className="font-weight-bold mb-3">Rooms</h6>
+                                <h5 className="font-weight-bold">Кімнати</h5>
 
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setRooms(event.target)} value={'0'} checked={this.state.rooms.includes('0')} type="checkbox" className="form-check-input filled-in"/>}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">Studio</label>
+                                    <label className="form-check-label card-link-secondary">Студія</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setRooms(event.target)} type="checkbox" value={'1'} checked={this.state.rooms.includes('1')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">1</label>
+                                    <label className="form-check-label card-link-secondary">1</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setRooms(event.target)} type="checkbox" value={'2'} checked={this.state.rooms.includes('2')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">2</label>
+                                    <label className="form-check-label card-link-secondary">2</label>
                                 </div>
                             </section>
 
                             <section className="mb-4">
 
-                                <h6 className="font-weight-bold mb-3">Floors</h6>
+                                <h5 className="font-weight-bold mb-3">Поверхи</h5>
 
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} value={'1'} checked={this.state.floors.includes('1')} type="checkbox" className="form-check-input filled-in"/>}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">1</label>
+                                    <label className="form-check-label card-link-secondary">1</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'2'} checked={this.state.floors.includes('2')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">2</label>
+                                    <label className="form-check-label card-link-secondary">2</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'3'} checked={this.state.floors.includes('3')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">3</label>
+                                    <label className="form-check-label card-link-secondary">3</label>
                                 </div>
 
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} value={'4'} checked={this.state.floors.includes('4')} type="checkbox" className="form-check-input filled-in"/>}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">4</label>
+                                    <label className="form-check-label card-link-secondary">4</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'5'} checked={this.state.floors.includes('5')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">5</label>
+                                    <label className="form-check-label card-link-secondary">5</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'6'} checked={this.state.floors.includes('6')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">6</label>
+                                    <label className="form-check-label card-link-secondary">6</label>
                                 </div>
 
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} value={'7'} checked={this.state.floors.includes('7')} type="checkbox" className="form-check-input filled-in"/>}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">7</label>
+                                    <label className="form-check-label card-link-secondary">7</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'8'} checked={this.state.floors.includes('8')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">8</label>
+                                    <label className="form-check-label card-link-secondary">8</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'9'} checked={this.state.floors.includes('9')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">9</label>
+                                    <label className="form-check-label card-link-secondary">9</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'10'} checked={this.state.floors.includes('10')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">10</label>
+                                    <label className="form-check-label card-link-secondary">10</label>
                                 </div>
                             </section>
                             <section className="mb-4">
 
-                                <h6 className="font-weight-bold mb-3">Living</h6>
+                                <h5 className="font-weight-bold mb-3">Тип</h5>
 
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setLiving(event.target)} value={'apt'} checked={this.state.living.includes('apt')} type="checkbox" className="form-check-input filled-in"/>}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">Apartment</label>
+                                    <label className="form-check-label card-link-secondary">Квартира</label>
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setLiving(event.target)} type="checkbox" value={'storage'} checked={this.state.living.includes('storage')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label small text-uppercase card-link-secondary">Storage</label>
+                                    <label className="form-check-label card-link-secondary">Кладова</label>
                                 </div>
                             </section>
                             {/*<button className={"btn-dark rounded"}>Apply</button>*/}
