@@ -63,8 +63,33 @@ export default class UnitsList extends Component {
 
     getUnits(){
         let cards = [];
+        let image;
         if(this.state) {
             this.state.units.forEach(unit => {
+                if(this.state) {
+                    switch(unit.planning){
+                        case "apt21":
+                            image = "https://i.ibb.co/ZxP9DcS/apt21.png";
+                            break;
+                        case "apt22":
+                            image = "https://i.ibb.co/n60rPFs/apt22.png";
+                            break;
+                        case "apt23":
+                            image = "https://i.ibb.co/xzLzCqK/apt23.png";
+                            break;
+                        case "apt24":
+                            image = "https://i.ibb.co/9nQ7080/apt24.png";
+                            break;
+                        case "apt25":
+                            image = "https://i.ibb.co/bXWrByx/apt25.png";
+                            break;
+                        case "apt26":
+                            image = "https://i.ibb.co/XbNXjsg/apt26.png";
+                            break;
+                        default:
+                            image = "https://i.ibb.co/qJCnsNP/storage-unit.png";
+                    }
+                }
                 unit.availability === true &&
                 unit.price >= this.state.min &&
                 unit.price <= this.state.max &&
@@ -78,19 +103,20 @@ export default class UnitsList extends Component {
                             state: unit,
                         }
                     } style={{textDecoration: 'none', color: "black"}}>
-                        <div className={"unit-info unit-card"} >
-                            <div className={"container unit-info-container"}>
-                                {unit.planning === "storage" ?
-                                    <h1 className={"h1-num"}>Кладівна {unit._id}</h1>
-                                    : <h1 className={"h1-num"}>Квартира {unit._id}</h1>
-                                }
+                        <div className={"unit-list-info unit-card"} >
+                            <div className={"unit-list-info-container"}>
+                                {/*{unit.planning === "storage" ?*/}
+                                {/*    <h1 className={"h1-num"}>Кладівна {unit._id}</h1>*/}
+                                {/*    : <h1 className={"h1-num"}>Квартира {unit._id}</h1>*/}
+                                {/*}*/}
+                                <img className="unit-info-plan" src={image} alt={"Floor plan"}/>
                             </div>
-                            <h5 className={"text-muted"}>{unit.floor} поверх</h5>
+                            <h5>{unit.floor} поверх</h5>
                             {
-                                unit.rooms === 1 ? <h5 className={"text-muted"}>1-кімнатна</h5> :  unit.rooms === 0 ? <h5 className={"text-muted"}>Студія</h5> : <h5>{unit.rooms} кімнати</h5>
+                                unit.rooms === 1 ? <h5>1-кімнатна</h5> :  unit.rooms === 0 ? <h5>Студія</h5> : <h5>{unit.rooms} кімнати</h5>
                             }
-                            <h5 className={"text-muted"}>{unit.total_area} кв.м.</h5>
-                            <h5 className={"text-muted"}>{unit.price}$</h5>
+                            <h5>{unit.total_area} кв.м.</h5>
+                            <h5>{unit.price}$</h5>
                         </div>
                     </Link>
                 );

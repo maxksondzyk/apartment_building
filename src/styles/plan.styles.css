@@ -4,7 +4,7 @@
 }
 
 .unit {
-    fill: #f0911c;
+    fill: #000000;
     fill-opacity: 0;
     stroke: black;
     stroke-width: 13;
@@ -47,4 +47,13 @@
 .floor-number {
     font-family: 'Play', sans-serif;
     padding: 0.2em 0.2em 0.2em 3.2em;
+}
+
+.plan-main-container{
+    background-color: #ffffff;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 2em;
+    border: black solid 0.2em;
+    padding-top: 1em;
 }

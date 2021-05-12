@@ -24,9 +24,9 @@ class Plan extends React.Component {
     render() {
         console.log(this.state.units)
         return (
-            <div>
+            <div className="plan-main-container">
                 <div className={"floor-number"}>
-                    <h1>Поверх {this.state.units[0].floor}</h1>
+                    <h1>ПОВЕРХ {this.state.units[0].floor}</h1>
                 </div>
                 <div className="plan-container">
                     <img className="plan-image" src={"https://i.ibb.co/gmbcd2Q/Main-plan1.png"} alt={"Floor plan"}/>

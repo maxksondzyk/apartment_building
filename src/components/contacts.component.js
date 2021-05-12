@@ -11,7 +11,7 @@ export default class Contacts extends Component {
 
     render() {
         return (
-                    <div className={'row contacts-container'}>
+                    <div className={'row contacts-container'} id="contacts">
                         <div className="contacts-div">
                             <h5>
                                 Зв'яжіться з нами

@@ -13,7 +13,7 @@
     background-color: white;
 }
 .unit-info {
-    background-color: rgba(255,255,255,0.8);;
+    background-color: rgba(255,255,255,1);;
     padding: 1em;
     margin: 0 1em 1em;
     border: solid black 0.2em;
@@ -21,7 +21,8 @@
 }
 .unit-info-container{
     width: fit-content;
-    background-color: #f0911c;
+    /*background-color: #f0911c;*/
+    background-color: #000000;
     padding-bottom: 0.1em;
     padding-top:0.1em;
 }

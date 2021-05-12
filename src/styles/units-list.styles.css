@@ -11,3 +11,20 @@
     padding: 1em;
     /*margin: auto;*/
 }
+.unit-info-plan{
+    max-width: 12.6em;
+    background-color: #ffffff;
+}
+.unit-list-info {
+    background-color: #ffffff;
+    padding: 1em;
+    margin: 0 1em 1em;
+    border: solid black 0.2em;
+    width: 15em;
+    /*height: fit-content;*/
+
+}
+.unit-list-info-container{
+    width: fit-content;
+    height: 16em;
+}

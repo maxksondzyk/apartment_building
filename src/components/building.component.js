@@ -24,8 +24,8 @@ class Building extends React.Component {
 
     render() {
         return(
-            <>
-                <div className={"pageLabel"} style={{marginLeft: "7%"}}>
+            <div className={"building-main-container"}>
+                <div className={"pageLabel"} style={{marginLeft: "4%"}}>
                     <h1>ОБЕРІТЬ ПОВЕРХ</h1>
                 </div>
             <div className={"building-container"}>
@@ -243,7 +243,7 @@ class Building extends React.Component {
                     </g>
                 </svg>
             </div>
-                </>
+                </div>
         )
     }
 }

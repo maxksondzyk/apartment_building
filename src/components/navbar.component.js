@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import "bootstrap/js/src/collapse.js";
 import "../styles/navbar.styles.css"
 export default class Navbar extends Component {
@@ -23,13 +24,16 @@ export default class Navbar extends Component {
                             <Link to="/units-list" className="nav-link">УСІ КВАРТИРИ</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/about" className="nav-link">ПРО НАС</Link>
+                            <Link to="/home#about" className="nav-link">ПРО НАС</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/location" className="nav-link">РОЗТАШУВАННЯ</Link>
+                            <Link to="/home#location" className="nav-link">РОЗТАШУВАННЯ</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/construction-progress" className="nav-link">ХІД БУДІВНИЦТВА</Link>
+                            <Link to="/home#construction-progress" className="nav-link">ХІД БУДІВНИЦТВА</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/home#contacts" className="nav-link">КОНТАКТИ</Link>
                         </li>
                     </ul>
                 </div>

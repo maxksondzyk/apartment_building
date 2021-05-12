@@ -12,7 +12,7 @@ import Footer from "./components/footer.component";
 import Plan from "./components/plan.component";
 import Unit from "./components/unit.component";
 import Building from "./components/building.component";
-import UnitsList from "./components/units-list";
+import UnitsList from "./components/units-list.component";
 import Home from "./components/home.component";
 
 function App() {
