@@ -13,6 +13,7 @@ import Footer from "./components/footer.component";
 import Plan from "./components/plan.component";
 import Unit from "./components/unit.component";
 import Building from "./components/building.component";
+import UnitsList from "./components/units-list";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/location" exact component={BuildingLocation} />
                 <Route path="/construction-progress" exact component={ConstructionProgress} />
                 <Route path="/building" exact component={Building} />
+                <Route path="/units-list" exact component={UnitsList} />
             </Router>
           </div>
           <div className={"footer-content"}>

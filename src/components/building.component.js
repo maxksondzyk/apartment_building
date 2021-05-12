@@ -24,6 +24,10 @@ class Building extends React.Component {
 
     render() {
         return(
+            <>
+                <div className={"pageLabel"}>
+                    <h1>Choose a floor</h1>
+                </div>
             <div className={"building-container"}>
                 <img className="building-plan-img rounded" src={"https://i.ibb.co/KsgvPHt/building.png"} alt={"Building plan"}/>
                 <svg viewBox="-19 0 370 250" className={"building-svg"}>
@@ -239,6 +243,7 @@ class Building extends React.Component {
                     </g>
                 </svg>
             </div>
+                </>
         )
     }
 }

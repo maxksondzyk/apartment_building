@@ -1,0 +1,14 @@
+.units-filters {
+    background-color: white;
+    padding: 1em;
+    /*margin: 5px;*/
+    margin-bottom: 1em;
+    height: fit-content;
+}
+.unit-card{
+    zoom: 0.8;
+}
+.units-list-container {
+    padding: 1em;
+    margin: auto;
+}

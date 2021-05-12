@@ -28,8 +28,6 @@ export default class Unit extends Component {
             this.state = { unit: props.location.state};
         }
 
-        console.log(props.location.state);
-
     }
 
     unitsList() {
