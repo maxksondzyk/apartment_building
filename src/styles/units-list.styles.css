@@ -19,13 +19,26 @@
 .unit-list-info {
     background-color: #ffffff;
     padding: 1em;
-    margin: 0 1em 1em;
     border: solid black 0.2em;
     width: 15em;
-    /*height: fit-content;*/
-
+    transition: all 0.1s;
 }
+.unit-list-info:hover {
+    /*background-color: rgba(255,255,255,0.9);*/
+    transform: scale(1.02);
+}
+
+.unit-link{
+    width: fit-content;
+    height: fit-content;
+    margin: auto auto 1em;
+}
+
 .unit-list-info-container{
     width: fit-content;
     height: 16em;
+}
+.unit-link{
+    text-decoration: none!important;
+    color: black!important;
 }

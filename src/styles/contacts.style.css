@@ -14,7 +14,17 @@
     margin-right: 0.5em;
 }
 .contact-link {
-    color: black;
+    text-decoration: none!important;
+    color: black!important;
+}
+.contact-link-div {
+    /*transition: all 0.1s;*/
+    width: fit-content;
+    height: fit-content;
+}
+.contact-link-div:hover {
+    /*transform: scale(0.97);*/
+    transform: scale(1.01);
 }
 .contacts-container{
     padding-left: 1em;

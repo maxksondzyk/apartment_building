@@ -102,7 +102,7 @@ export default class UnitsList extends Component {
                             pathname: '/unit',
                             state: unit,
                         }
-                    } style={{textDecoration: 'none', color: "black"}}>
+                    } className={"unit-link"}>
                         <div className={"unit-list-info unit-card"} >
                             <div className={"unit-list-info-container"}>
                                 {/*{unit.planning === "storage" ?*/}
@@ -230,7 +230,7 @@ export default class UnitsList extends Component {
                                 </div>
                                 <div className="form-check">
                                     {this.state && <input onChange={event => this.setLiving(event.target)} type="checkbox" value={'storage'} checked={this.state.living.includes('storage')} className="form-check-input filled-in" />}
-                                    <label className="form-check-label card-link-secondary">Кладова</label>
+                                    <label className="form-check-label card-link-secondary">Комора</label>
                                 </div>
                             </section>
                             {/*<button className={"btn-dark rounded"}>Apply</button>*/}

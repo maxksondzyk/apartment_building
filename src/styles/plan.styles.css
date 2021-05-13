@@ -15,7 +15,7 @@
 
 .unit-taken {
     fill: grey;
-    fill-opacity: 0.5;
+    fill-opacity: 0.3;
     stroke: black;
     stroke-width: 13;
     stroke-opacity: 1;
@@ -52,7 +52,8 @@
 }
 
 .plan-main-container{
-    background-color: #ffffff;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 0.5s;
     border: black solid 0.2em;
     padding-top: 1em;
     margin: 4em 3em 2em;
