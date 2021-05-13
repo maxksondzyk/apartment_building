@@ -1,8 +1,5 @@
 .main-window {
-    /*background: rgb(49,64,255);*/
-    /*background: rgb(255,2500,255);*/
     background: #f0911c;
-    /*background: linear-gradient(45deg, rgba(49,64,255,0.9615196420365021) 0%, rgba(152,37,246,1) 27%, rgba(255,53,247,1) 62%, rgba(255,25,146,1) 100%);*/
 }
 .content{
     min-height: calc(100vh - 90px)
@@ -15,16 +12,11 @@
     margin: 0;
 }
 .pageLabel{
-    /*background-color: rgba(255,255,255,0.7);*/
-    /*padding: 0.2em 2em 0.2em 0em;*/
-    /*margin-bottom: 2em;*/
     width: fit-content;
-    /*margin-left: 0.8em;*/
-    padding-top: 0em;
-    /*border-top-right-radius: 5px;*/
-    /*border-bottom-right-radius: 5px;*/
-    /*font-family: 'Roboto Mono', monospace;*/
-    /*font-family: 'Jura', sans-serif;*/
     font-family: 'Play', sans-serif;
-    /*font-family: 'Archivo',sans-serif;*/
+}
+.anchor{
+    position: relative;
+    top: -4em;
+    visibility: hidden;
 }

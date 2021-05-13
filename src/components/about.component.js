@@ -3,9 +3,9 @@ import "../styles/about.styles.css"
 export default class About extends Component {
     render() {
         return (
-            <>
-
-            <div className="about-container container container-fluid rounded" id="about">
+            <div>
+                <a className="anchor" id="about"/>
+            <div className="about-container container container-fluid rounded">
                 <div className={"pageLabel"}>
                     <h1>ПРО НАС</h1>
                 </div>
@@ -13,7 +13,7 @@ export default class About extends Component {
                     Сучасні жителі мегаполісу мають різний спосіб життя. Бажаючі жити в центрі міста ведуть активний спосіб життя. Ми вважаємо, що житло для ініціативних громадян є невід’ємною частиною їх динамічного життя. ЖК Forward - близький за духом до своїх майбутніх прогресивних мешканців. Ми створюємо активний спосіб житла, а не виключно житловий комплекс. Не тільки місце відпочинку та затишку, а й територія для всебічного розвитку. Наше бажання - побудувати житло, яке стане спільнотою однодумців, які звикли динамічно жити. Крім того, комплекс буде оснащений сучасною системою безпеки та відеоспостереження.
                 </h5>
             </div>
-                </>
+                </div>
         );
     }
 }

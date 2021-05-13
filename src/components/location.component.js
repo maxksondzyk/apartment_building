@@ -6,8 +6,9 @@ import { FaCar } from 'react-icons/fa'
 export default class BuildingLocation extends Component {
     render() {
         return (
-            <>
-            <div className="location-container container container-fluid" id="location">
+            <div>
+                <a className="anchor" id="location"/>
+            <div className="location-container container container-fluid">
                 <div className={"pageLabel"} style={{marginLeft: "0.8em"}}>
                     <h1>РОЗТАШУВАННЯ</h1>
                 </div>
@@ -38,7 +39,7 @@ export default class BuildingLocation extends Component {
                     </div>
                 </div>
             </div>
-                </>
+                </div>
         );
     }
 }

@@ -13,7 +13,8 @@ SwiperCore.use([Pagination,Navigation]);
 export default class ConstructionProgress extends Component {
     render() {
         return (
-            <div className="container gallery-container" id="construction-progress">
+            <div className="container gallery-container">
+                <a className="anchor" id="construction-progress"/>
                 <div className={"pageLabel"}>
                     <h1>ХІД БУДІВНИЦТВА</h1>
                 </div>

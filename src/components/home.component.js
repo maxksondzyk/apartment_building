@@ -16,7 +16,7 @@ SwiperCore.use([Pagination,Navigation]);
 export default class Home extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="container" style={{marginTop:"4em"}}>
                 <br/>
                 <div className="container gallery-container">
                     <Swiper pagination={{

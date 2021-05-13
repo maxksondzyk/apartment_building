@@ -25,9 +25,6 @@ function App() {
                 <Route path="/" exact component = {Building}/>
                 <Route path="/units" exact component={Plan} />
                 <Route path="/unit" exact component={Unit} />
-                <Route path="/about" exact component={About} />
-                <Route path="/location" exact component={BuildingLocation} />
-                <Route path="/construction-progress" exact component={ConstructionProgress} />
                 <Route path="/building" exact component={Building} />
                 <Route path="/units-list" exact component={UnitsList} />
                 <Route path="/home" exact component={Home} />

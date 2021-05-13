@@ -41,7 +41,9 @@
     top: -5%;
     left: 2.1%;
     width: inherit;
+    /*padding-bottom: -4em;*/
     padding: 5.7%;
+
 }
 
 .floor-number {
@@ -51,9 +53,7 @@
 
 .plan-main-container{
     background-color: #ffffff;
-    margin-left: 3em;
-    margin-right: 3em;
-    margin-bottom: 2em;
     border: black solid 0.2em;
     padding-top: 1em;
+    margin: 4em 3em 2em;
 }

@@ -13,6 +13,11 @@
 .navbar{
     border-bottom: solid 0.2em;
     font-family: 'Play', sans-serif;
+    position: fixed;
+    width: 100%;
+    /*padding-top: -40px;*/
+    /*margin-bottom: 4em;*/
+    z-index: 2;
 }
 
 
