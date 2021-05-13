@@ -7,6 +7,7 @@ import axios from "axios";
 class Building extends React.Component {
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         axios.get('http://localhost:5000/units/')
             .then(response => {
                 this.setState({ units: response.data })
@@ -14,6 +15,7 @@ class Building extends React.Component {
             .catch((error) => {
                 console.log(error);
             })
+
     }
 
     getUnits(floor){

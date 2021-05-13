@@ -29,6 +29,9 @@ export default class Unit extends Component {
         }
 
     }
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
 
     unitsList() {
         if(this.state) {

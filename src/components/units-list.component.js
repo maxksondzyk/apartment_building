@@ -4,19 +4,39 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 export default class UnitsList extends Component {
     componentDidMount() {
+        // localStorage.clear()
         axios.get('http://localhost:5000/units/')
             .then(response => {
-                this.setState({ units: response.data, min:10000,max:70000,rooms:['0','1','2'],floors:['0','1','2','3','4','5','6','7','8','9','10'], living:['apt','storage'] });
+                this.setState({ units: response.data, min:10000,max:70000,rooms:['0','1','2'],floors:['1','2','3','4','5','6','7','8','9','10'], living:['apt','storage'] });
+                if(this.state) {
+                    let state = this.state
+                    if (localStorage.getItem('min'))
+                        state.min = localStorage.getItem('min')
+                    if (localStorage.getItem('max'))
+                        state.max = localStorage.getItem('max')
+                    if (localStorage.getItem('rooms'))
+                        state.rooms = JSON.parse(localStorage.getItem('rooms'))
+                    if (localStorage.getItem('floors'))
+                        state.floors = JSON.parse(localStorage.getItem('floors'))
+                    if (localStorage.getItem('living'))
+                        state.living = JSON.parse(localStorage.getItem('living'))
+                    this.setState(state)
+                    // console.log(localStorage.getItem('floors')[1])
+                }
             })
             .catch((error) => {
                 console.log(error);
             })
+        window.scrollTo(0, 0);
+
     }
     setMin(min){
         this.setState({min:min});
+        localStorage.setItem('min',min);
     }
     setMax(max){
         this.setState({max:max});
+        localStorage.setItem('max',max);
     }
     setRooms(val){
         const checked = val.checked;
@@ -25,12 +45,15 @@ export default class UnitsList extends Component {
         if(checked) {
             rooms.push(num)
             this.setState({rooms: rooms})
+            localStorage.setItem('rooms', JSON.stringify(rooms));
         }
         else {
             const index = rooms.indexOf(num);
             rooms.splice(index,1)
             this.setState({rooms: rooms})
+            localStorage.setItem('rooms', JSON.stringify(rooms));
         }
+
     }
     setFloors(val){
         const checked = val.checked;
@@ -39,11 +62,13 @@ export default class UnitsList extends Component {
         if(checked) {
             floors.push(num)
             this.setState({floors: floors})
+            localStorage.setItem('floors', JSON.stringify(floors));
         }
         else {
             const index = floors.indexOf(num);
             floors.splice(index,1)
             this.setState({floors: floors})
+            localStorage.setItem('floors',JSON.stringify(floors));
         }
     }
     setLiving(val){
@@ -53,11 +78,13 @@ export default class UnitsList extends Component {
         if(checked) {
             living.push(type)
             this.setState({living: living})
+            localStorage.setItem('living',JSON.stringify(living));
         }
         else {
             const index = living.indexOf(type);
             living.splice(index,1)
             this.setState({living: living})
+            localStorage.setItem('living',JSON.stringify(living));
         }
     }
 
@@ -142,12 +169,12 @@ export default class UnitsList extends Component {
                                 <form>
                                     <div className="d-flex align-items-center mt-4 pb-1">
                                         <div className="md-form md-outline my-0">
-                                            {this.state && <input onChange={event => this.setMin(event.target.value)} type="number" min="10000" max={this.state.max} step="5000" placeholder={10000} className="form-control mb-0"/>}
+                                            {this.state && <input onChange={event => this.setMin(event.target.value)} type="number" min="10000" max={this.state.max} step="5000" value={this.state.min} className="form-control mb-0"/>}
                                             <label>Від</label>
                                         </div>
                                         <p className="px-2 mb-0 text-muted"> - </p>
                                         <div className="md-form md-outline my-0">
-                                            {this.state && <input onChange={event => this.setMax(event.target.value)} type="number" min={this.state.min} max="70000" step="5000" placeholder={70000} className="form-control mb-0"/>}
+                                            {this.state && <input onChange={event => this.setMax(event.target.value)} type="number" min={this.state.min} max="70000" step="5000" value={this.state.max} className="form-control mb-0"/>}
                                             <label>До</label>
                                         </div>
                                     </div>

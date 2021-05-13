@@ -11,6 +11,11 @@ class Plan extends React.Component {
         }
 
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     getUnit(planning){
         let result;
         this.state.units.forEach(unit => {
@@ -22,7 +27,6 @@ class Plan extends React.Component {
        
     }
     render() {
-        console.log(this.state.units)
         return (
             <div className="plan-main-container">
                 <div className={"floor-number"}>
