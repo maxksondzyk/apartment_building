@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import React, {Component} from 'react';
+import {HashLink as Link} from 'react-router-hash-link';
 import "bootstrap/js/src/collapse.js";
 import "../styles/navbar.styles.css"
+
 export default class Navbar extends Component {
 
     render() {

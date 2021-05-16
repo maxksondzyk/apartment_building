@@ -55,7 +55,7 @@ router.route('/update/:id').post((req, res) => {
             unit.price = Number(req.body.price);
 
             unit.save()
-                .then(() => res.json('Apartment updated!'))
+                .then(() => res.json('Unit updated!'))
                 .catch(err => res.status(400).json('Error: ' + err));
         })
         .catch(err => res.status(400).json('Error: ' + err));

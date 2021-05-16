@@ -18,9 +18,9 @@ mongoose.connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 });
 
-const apartmentsRouter = require('./routes/units');
+const unitsRouter = require('./routes/units');
 
-app.use('/units', apartmentsRouter);
+app.use('/units', unitsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

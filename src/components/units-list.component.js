@@ -1,14 +1,21 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import "../styles/units-list.styles.css"
 import axios from "axios";
 import {Link} from "react-router-dom";
+
 export default class UnitsList extends Component {
     componentDidMount() {
-        // localStorage.clear()
         axios.get('http://localhost:5000/units/')
             .then(response => {
-                this.setState({ units: response.data, min:10000,max:70000,rooms:['0','1','2'],floors:['1','2','3','4','5','6','7','8','9','10'], living:['apt','storage'] });
-                if(this.state) {
+                this.setState({
+                    units: response.data,
+                    min: 10000,
+                    max: 70000,
+                    rooms: ['0', '1', '2'],
+                    floors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                    living: ['apt', 'storage']
+                });
+                if (this.state) {
                     let state = this.state
                     if (localStorage.getItem('min'))
                         state.min = localStorage.getItem('min')
@@ -21,7 +28,6 @@ export default class UnitsList extends Component {
                     if (localStorage.getItem('living'))
                         state.living = JSON.parse(localStorage.getItem('living'))
                     this.setState(state)
-                    // console.log(localStorage.getItem('floors')[1])
                 }
             })
             .catch((error) => {
@@ -30,71 +36,73 @@ export default class UnitsList extends Component {
         window.scrollTo(0, 0);
 
     }
-    setMin(min){
-        this.setState({min:min});
-        localStorage.setItem('min',min);
+
+    setMin(min) {
+        this.setState({min: min});
+        localStorage.setItem('min', min);
     }
-    setMax(max){
-        this.setState({max:max});
-        localStorage.setItem('max',max);
+
+    setMax(max) {
+        this.setState({max: max});
+        localStorage.setItem('max', max);
     }
-    setRooms(val){
+
+    setRooms(val) {
         const checked = val.checked;
         const num = val.value;
         let rooms = this.state.rooms;
-        if(checked) {
+        if (checked) {
             rooms.push(num)
             this.setState({rooms: rooms})
             localStorage.setItem('rooms', JSON.stringify(rooms));
-        }
-        else {
+        } else {
             const index = rooms.indexOf(num);
-            rooms.splice(index,1)
+            rooms.splice(index, 1)
             this.setState({rooms: rooms})
             localStorage.setItem('rooms', JSON.stringify(rooms));
         }
 
     }
-    setFloors(val){
+
+    setFloors(val) {
         const checked = val.checked;
         const num = val.value;
         let floors = this.state.floors;
-        if(checked) {
+        if (checked) {
             floors.push(num)
             this.setState({floors: floors})
             localStorage.setItem('floors', JSON.stringify(floors));
-        }
-        else {
+        } else {
             const index = floors.indexOf(num);
-            floors.splice(index,1)
+            floors.splice(index, 1)
             this.setState({floors: floors})
-            localStorage.setItem('floors',JSON.stringify(floors));
-        }
-    }
-    setLiving(val){
-        const checked = val.checked;
-        const type = val.value;
-        let living = this.state.living;
-        if(checked) {
-            living.push(type)
-            this.setState({living: living})
-            localStorage.setItem('living',JSON.stringify(living));
-        }
-        else {
-            const index = living.indexOf(type);
-            living.splice(index,1)
-            this.setState({living: living})
-            localStorage.setItem('living',JSON.stringify(living));
+            localStorage.setItem('floors', JSON.stringify(floors));
         }
     }
 
-    getUnits(){
+    setLiving(val) {
+        const checked = val.checked;
+        const type = val.value;
+        let living = this.state.living;
+        if (checked) {
+            living.push(type)
+            this.setState({living: living})
+            localStorage.setItem('living', JSON.stringify(living));
+        } else {
+            const index = living.indexOf(type);
+            living.splice(index, 1)
+            this.setState({living: living})
+            localStorage.setItem('living', JSON.stringify(living));
+        }
+    }
+
+    getUnits() {
         let cards = [];
         let image;
-        if(this.state) {
+        if (this.state) {
             this.state.units.forEach(unit => {
-                if(this.state) {
-                    switch(unit.planning){
+                if (this.state) {
+                    switch (unit.planning) {
                         case "apt21":
                             image = "https://i.ibb.co/ZxP9DcS/apt21.png";
                             break;
@@ -122,7 +130,7 @@ export default class UnitsList extends Component {
                 unit.price <= this.state.max &&
                 this.state.rooms.includes(unit.rooms.toString()) &&
                 this.state.floors.includes(unit.floor.toString()) &&
-                this.state.living.includes(unit.planning.toString().includes('apt')? unit.planning.slice(0,3) : unit.planning.toString()) &&
+                this.state.living.includes(unit.planning.toString().includes('apt') ? unit.planning.slice(0, 3) : unit.planning.toString()) &&
                 cards.push(
                     <Link to={
                         {
@@ -130,7 +138,7 @@ export default class UnitsList extends Component {
                             state: unit,
                         }
                     } className={"unit-link"}>
-                        <div className={"unit-list-info unit-card"} >
+                        <div className={"unit-list-info unit-card"}>
                             <div className={"unit-list-info-container"}>
                                 {/*{unit.planning === "storage" ?*/}
                                 {/*    <h1 className={"h1-num"}>Кладівна {unit._id}</h1>*/}
@@ -140,7 +148,8 @@ export default class UnitsList extends Component {
                             </div>
                             <h5>{unit.floor} поверх</h5>
                             {
-                                unit.rooms === 1 ? <h5>1-кімнатна</h5> :  unit.rooms === 0 ? <h5>Студія</h5> : <h5>{unit.rooms} кімнати</h5>
+                                unit.rooms === 1 ? <h5>1-кімнатна</h5> : unit.rooms === 0 ? <h5>Студія</h5> :
+                                    <h5>{unit.rooms} кімнати</h5>
                             }
                             <h5>{unit.total_area} кв.м.</h5>
                             <h5>{unit.price}$</h5>
@@ -154,7 +163,7 @@ export default class UnitsList extends Component {
 
     render() {
         let cards = [];
-        if(this.state)
+        if (this.state)
             cards = this.getUnits()
 
         return (
@@ -169,12 +178,18 @@ export default class UnitsList extends Component {
                                 <form>
                                     <div className="d-flex align-items-center mt-4 pb-1">
                                         <div className="md-form md-outline my-0">
-                                            {this.state && <input onChange={event => this.setMin(event.target.value)} type="number" min="10000" max={this.state.max} step="5000" value={this.state.min} className="form-control mb-0"/>}
+                                            {this.state &&
+                                            <input onChange={event => this.setMin(event.target.value)} type="number"
+                                                   min="10000" max={this.state.max} step="5000" value={this.state.min}
+                                                   className="form-control mb-0"/>}
                                             <label>Від</label>
                                         </div>
                                         <p className="px-2 mb-0 text-muted"> - </p>
                                         <div className="md-form md-outline my-0">
-                                            {this.state && <input onChange={event => this.setMax(event.target.value)} type="number" min={this.state.min} max="70000" step="5000" value={this.state.max} className="form-control mb-0"/>}
+                                            {this.state &&
+                                            <input onChange={event => this.setMax(event.target.value)} type="number"
+                                                   min={this.state.min} max="70000" step="5000" value={this.state.max}
+                                                   className="form-control mb-0"/>}
                                             <label>До</label>
                                         </div>
                                     </div>
@@ -187,15 +202,23 @@ export default class UnitsList extends Component {
                                 <h5 className="font-weight-bold">Кімнати</h5>
 
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setRooms(event.target)} value={'0'} checked={this.state.rooms.includes('0')} type="checkbox" className="form-check-input filled-in"/>}
+                                    {this.state && <input onChange={event => this.setRooms(event.target)} value={'0'}
+                                                          checked={this.state.rooms.includes('0')} type="checkbox"
+                                                          className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">Студія</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setRooms(event.target)} type="checkbox" value={'1'} checked={this.state.rooms.includes('1')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setRooms(event.target)} type="checkbox" value={'1'}
+                                           checked={this.state.rooms.includes('1')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">1</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setRooms(event.target)} type="checkbox" value={'2'} checked={this.state.rooms.includes('2')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setRooms(event.target)} type="checkbox" value={'2'}
+                                           checked={this.state.rooms.includes('2')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">2</label>
                                 </div>
                             </section>
@@ -205,45 +228,72 @@ export default class UnitsList extends Component {
                                 <h5 className="font-weight-bold mb-3">Поверхи</h5>
 
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} value={'1'} checked={this.state.floors.includes('1')} type="checkbox" className="form-check-input filled-in"/>}
+                                    {this.state && <input onChange={event => this.setFloors(event.target)} value={'1'}
+                                                          checked={this.state.floors.includes('1')} type="checkbox"
+                                                          className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">1</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'2'} checked={this.state.floors.includes('2')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'2'}
+                                           checked={this.state.floors.includes('2')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">2</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'3'} checked={this.state.floors.includes('3')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'3'}
+                                           checked={this.state.floors.includes('3')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">3</label>
                                 </div>
 
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} value={'4'} checked={this.state.floors.includes('4')} type="checkbox" className="form-check-input filled-in"/>}
+                                    {this.state && <input onChange={event => this.setFloors(event.target)} value={'4'}
+                                                          checked={this.state.floors.includes('4')} type="checkbox"
+                                                          className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">4</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'5'} checked={this.state.floors.includes('5')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'5'}
+                                           checked={this.state.floors.includes('5')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">5</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'6'} checked={this.state.floors.includes('6')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'6'}
+                                           checked={this.state.floors.includes('6')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">6</label>
                                 </div>
 
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} value={'7'} checked={this.state.floors.includes('7')} type="checkbox" className="form-check-input filled-in"/>}
+                                    {this.state && <input onChange={event => this.setFloors(event.target)} value={'7'}
+                                                          checked={this.state.floors.includes('7')} type="checkbox"
+                                                          className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">7</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'8'} checked={this.state.floors.includes('8')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'8'}
+                                           checked={this.state.floors.includes('8')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">8</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'9'} checked={this.state.floors.includes('9')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'9'}
+                                           checked={this.state.floors.includes('9')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">9</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'10'} checked={this.state.floors.includes('10')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setFloors(event.target)} type="checkbox" value={'10'}
+                                           checked={this.state.floors.includes('10')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">10</label>
                                 </div>
                             </section>
@@ -252,15 +302,19 @@ export default class UnitsList extends Component {
                                 <h5 className="font-weight-bold mb-3">Тип</h5>
 
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setLiving(event.target)} value={'apt'} checked={this.state.living.includes('apt')} type="checkbox" className="form-check-input filled-in"/>}
+                                    {this.state && <input onChange={event => this.setLiving(event.target)} value={'apt'}
+                                                          checked={this.state.living.includes('apt')} type="checkbox"
+                                                          className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">Квартира</label>
                                 </div>
                                 <div className="form-check">
-                                    {this.state && <input onChange={event => this.setLiving(event.target)} type="checkbox" value={'storage'} checked={this.state.living.includes('storage')} className="form-check-input filled-in" />}
+                                    {this.state &&
+                                    <input onChange={event => this.setLiving(event.target)} type="checkbox"
+                                           value={'storage'} checked={this.state.living.includes('storage')}
+                                           className="form-check-input filled-in"/>}
                                     <label className="form-check-label card-link-secondary">Комора</label>
                                 </div>
                             </section>
-                            {/*<button className={"btn-dark rounded"}>Apply</button>*/}
 
                         </section>
 

@@ -5,9 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/app.styles.css"
 
 import Navbar from "./components/navbar.component"
-import About from "./components/about.component";
-import BuildingLocation from "./components/location.component";
-import ConstructionProgress from "./components/construction-progress.component";
 import Footer from "./components/footer.component";
 import Plan from "./components/plan.component";
 import Unit from "./components/unit.component";
