@@ -8,7 +8,7 @@ class Building extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-        axios.get('http://localhost:5000/units/')
+        axios.get(`http://localhost:${process.env.PORT || 5000}/units/`)
             .then(response => {
                 this.setState({ units: response.data })
             })

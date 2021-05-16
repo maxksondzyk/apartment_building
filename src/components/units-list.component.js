@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 export default class UnitsList extends Component {
     componentDidMount() {
-        axios.get('http://localhost:5000/units/')
+        axios.get(`http://localhost:${process.env.PORT || 5000}/units/`)
             .then(response => {
                 this.setState({
                     units: response.data,
